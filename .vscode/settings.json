@@ -1,0 +1,5 @@
+{
+    "arduino.commandPath": "C:\\Program Files\\arduino",
+    "arduino.enableUSBDetection": true,
+    "arduino.logLevel": "verbose"
+}
