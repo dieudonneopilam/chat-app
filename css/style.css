@@ -18,26 +18,28 @@ body {
 
 #p-gauche {
   width: 330px;
-  box-shadow: 0px 5px 1px black;
-}
-@media only screen and (max-width:992px) {
-  #p-gauche {
-    width: 100vh;
-  }
+  box-shadow: 0px 1px 1px black;
 }
 #p-gauche #pg-header {
-  text-align: left;
+  text-align: center;
   height: 40px;
 }
 #p-gauche #pg-header p {
   display: inline-block;
   vertical-align: middle;
   font-size: large;
-  margin-left: 5px;
-  margin-top: 15px;
+  width: 30%;
+}
+#p-gauche #pg-header .s-msg {
+  text-align: left;
+}
+#p-gauche #pg-header .t-msg {
+  text-align: center;
+  color: #2180f3;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 #p-gauche #pg-header .icon-parametre {
-  margin-left: 190px;
+  text-align: right;
 }
 #p-gauche #search {
   text-align: center;
@@ -45,7 +47,7 @@ body {
 }
 #p-gauche #search p input {
   margin-top: -7px;
-  width: 300px;
+  width: 95%;
   height: 35px;
   border-radius: 5px;
   background-color: #f7f7f7;
@@ -58,9 +60,19 @@ body {
 #p-gauche #onglet div {
   margin-top: 0px;
   display: inline-block;
-  width: 157px;
+  width: 49%;
   text-align: center;
   height: 30px;
+}
+#p-gauche #onglet div.person:hover, #p-gauche #onglet div.person:active {
+  border-bottom: 3px solid #2180f3;
+  background-color: rgb(248, 248, 248);
+  border-radius: 5px;
+}
+#p-gauche #onglet div.group:hover {
+  border-bottom: 3px solid #779ece;
+  background-color: rgb(248, 248, 248);
+  border-radius: 5px;
 }
 #p-gauche #onglet div p {
   margin-top: 0px;
@@ -71,7 +83,7 @@ body {
 }
 #p-gauche #onglet div .o-title {
   color: #2180f3;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 #p-gauche #box-g {
   box-shadow: 0px 4px 4Px rgb(237, 241, 243);
@@ -80,39 +92,32 @@ body {
   height: 500px;
   overflow: auto;
   scrollbar-width: 20px;
+  text-align: left;
 }
-#p-gauche #content-users li {
-  margin-left: -40px;
-  height: 70px;
+#p-gauche #content-users #one-content {
+  border: 1px solid red;
+  margin-top: 5px;
+  height: 50px;
+  padding: 5px;
 }
-#p-gauche #content-users li .msg-profil, #p-gauche #content-users li div {
-  display: inline-block;
-  vertical-align: top;
+#p-gauche #content-users #one-content .img {
+  float: left;
+  clear: both;
+  margin-right: 10px;
 }
-#p-gauche #content-users li .msg-profil img {
-  width: 40px;
-  height: 40px;
+#p-gauche #content-users #one-content .img img {
+  height: 50px;
+  width: 50px;
   border-radius: 50px;
-  margin-left: 5px;
 }
-#p-gauche #content-users li div {
-  margin-left: 5px;
-  border-bottom: 1px solid #dadada;
+#p-gauche #content-users #one-content .msg-name {
+  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
-#p-gauche #content-users li div .msg-content {
-  position: relative;
-  bottom: 10px;
-  color: rgb(77, 74, 74);
+#p-gauche #content-users #one-content .msg-content {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-}
-#p-gauche #content-users li div .msg-name {
-  position: relative;
-  top: 5px;
-  font-size: 16px;
-  color: rgb(62, 60, 60);
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  border: 1px solid red;
+  width: 50px;
 }
 
 #p-milieu {
@@ -121,25 +126,29 @@ body {
 #p-milieu header {
   width: 738;
   box-shadow: 1px 0px 4px black;
+  text-align: center;
 }
 #p-milieu header #h-gauche, #p-milieu header #h-droite {
   display: inline-block;
-  width: 360px;
+  width: 49%;
 }
 #p-milieu header div p {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
-#p-milieu header div p.img-h {
+#p-milieu header div p .img-h {
   margin-left: 5px;
   width: 30px;
   height: 30px;
   border-radius: 30px;
-  background: #f6f7f8;
-  background-image: -webkit-linear-gradient(left, #f6f7f8 0%, #eaecf3 20%, #f6f7f8 40%, #f6f7f8 100%);
+}
+#p-milieu header div p.h-title {
+  font-size: 20px;
+  margin-left: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 #p-milieu #messages {
-  height: 530px;
+  height: 82%;
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.3333333333);
 }
@@ -154,7 +163,6 @@ body {
   width: fit-content;
   border-radius: 12px;
   word-wrap: break-word;
-  box-shadow: 0px 2px 2px #000000;
   padding: 0px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -165,7 +173,7 @@ body {
 }
 #p-milieu #messages #envoyer-par {
   clear: both;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0deg, 0%, 93%);
   color: black;
   border-radius: 12px;
   margin-left: 5px;
@@ -176,41 +184,33 @@ body {
   max-width: 300px;
   font-size: 17px;
   font-family: Georgia, Verdana, Geneva, Tahoma, sans-serif;
-  box-shadow: 0px 2px 2px #000000;
 }
 #p-milieu #messages #envoyer-par p {
   padding: 10px;
 }
 #p-milieu #e-saisie {
-  position: absolute;
-  bottom: -17px;
-  background-color: rgba(248, 244, 244, 0.5);
+  position: relative;
+  bottom: 0px;
+  height: 50px;
 }
-#p-milieu #e-saisie p {
-  display: inline-block;
+#p-milieu #e-saisie div .add img, #p-milieu #e-saisie div .like img, #p-milieu #e-saisie div .sticker img, #p-milieu #e-saisie div .add-img img, #p-milieu #e-saisie div .mic img {
+  margin-top: 10px;
 }
-#p-milieu #e-saisie p textarea {
-  height: 40px;
-  width: 725px;
+#p-milieu #e-saisie div .input {
+  height: 20px;
+  width: 50%;
   margin: 0px;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  padding-left: 7px;
+  padding: 7px;
+  padding-left: 10px;
   padding-top: 7px;
   border-radius: 10px;
-  background-color: rgba(248, 244, 244, 0.5);
-}
-#p-milieu #e-saisie p img {
-  position: relative;
-  right: 40px;
-  bottom: 5px;
-  height: 40px;
-  width: 0px;
 }
 
 #p-droite {
   width: 250px;
-  box-shadow: 0px 5px 5px black;
+  box-shadow: 0px 1px 1px black;
   text-align: center;
 }
 #p-droite p img {
@@ -223,6 +223,10 @@ body {
   font-size: 20px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+}
+#p-droite p.promotion {
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 #p-droite div#chat_ {
   height: 50px;
@@ -237,6 +241,195 @@ body {
 }
 #p-droite div#chat_ span .chat {
   margin-top: 10px;
+}
+
+@media all and (min-width:992px) {
+  #p-gauche, #p-milieu, #p-droite {
+    height: 100vh;
+  }
+  #p-gauche {
+    width: 25%;
+  }
+  #p-milieu {
+    width: 55%;
+  }
+  #p-milieu #e-saisie {
+    position: absolute;
+    bottom: 0%;
+    width: 55%;
+  }
+  #p-milieu #e-saisie div {
+    display: inline-block;
+    width: 97%;
+  }
+  #p-milieu #e-saisie div #input {
+    width: 65%;
+    border: 0.2px solid rgb(245, 245, 245);
+    height: 20px;
+    margin: 0px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: rgb(245, 245, 245);
+  }
+  #p-milieu #e-saisie div span {
+    margin: 1%;
+  }
+  #p-droite {
+    width: 19%;
+  }
+}
+@media all and (min-width:768px) and (max-width:991px) {
+  #p-gauche, #p-milieu, #p-droite {
+    height: 100vh;
+  }
+  #p-gauche {
+    width: 35%;
+  }
+  #p-gauche #content-users {
+    height: 70vh;
+    overflow: auto;
+    scrollbar-width: 20px;
+  }
+  #p-gauche #content-users li {
+    margin-left: -40px;
+    height: 70px;
+  }
+  #p-gauche #content-users li .msg-profil, #p-gauche #content-users li div {
+    display: inline-block;
+    vertical-align: top;
+  }
+  #p-gauche #content-users li .msg-profil img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-left: 5px;
+  }
+  #p-gauche #content-users li div {
+    margin-left: 5px;
+  }
+  #p-gauche #content-users li div .msg-content {
+    position: relative;
+    bottom: 10px;
+    color: rgb(77, 74, 74);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+  #p-gauche #content-users li div .msg-name {
+    position: relative;
+    top: 5px;
+    font-size: 16px;
+    color: rgb(62, 60, 60);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  #p-milieu {
+    width: 64%;
+  }
+  #p-milieu #e-saisie {
+    position: absolute;
+    bottom: 0%;
+    width: 55%;
+  }
+  #p-milieu #e-saisie div {
+    display: inline-block;
+    width: 97%;
+  }
+  #p-milieu #e-saisie div #input {
+    width: 51%;
+    border: 0.2px solid rgb(245, 245, 245);
+    height: 20px;
+    margin: 0px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(245, 245, 245);
+  }
+  #p-milieu #e-saisie div span {
+    margin: 1%;
+  }
+  #p-droite {
+    display: none;
+    width: 18%;
+  }
+}
+@media all and (max-width:767px) {
+  #p-gauche, #p-milieu, #p-droite {
+    height: 100vh;
+  }
+  #p-gauche {
+    width: 100%;
+  }
+  #p-gauche #content-users {
+    height: 70vh;
+    overflow: auto;
+    scrollbar-width: 20px;
+  }
+  #p-gauche #content-users li {
+    margin-left: -40px;
+    height: 70px;
+  }
+  #p-gauche #content-users li .msg-profil, #p-gauche #content-users li div {
+    display: inline-block;
+    vertical-align: top;
+  }
+  #p-gauche #content-users li .msg-profil img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-left: 5px;
+  }
+  #p-gauche #content-users li div {
+    margin-left: 5px;
+  }
+  #p-gauche #content-users li div .msg-content {
+    position: relative;
+    bottom: 10px;
+    color: rgb(77, 74, 74);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+  #p-gauche #content-users li div .msg-name {
+    position: relative;
+    top: 5px;
+    font-size: 16px;
+    color: rgb(62, 60, 60);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  #p-milieu {
+    display: none;
+    width: 58%;
+  }
+  #p-milieu #e-saisie {
+    position: absolute;
+    bottom: 0%;
+    width: 55%;
+  }
+  #p-milieu #e-saisie div {
+    display: inline-block;
+    width: 97%;
+  }
+  #p-milieu #e-saisie div #input {
+    width: 66%;
+    border: 0.2px solid rgb(245, 245, 245);
+    height: 25px;
+    margin: 0px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(245, 245, 245);
+  }
+  #p-milieu #e-saisie div span {
+    margin: 1%;
+  }
+  #p-droite {
+    display: none;
+    width: 18%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

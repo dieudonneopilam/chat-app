@@ -1,4 +1,3 @@
-@import './lib/responsive.scss';
 
 body{
     background: rgb(255, 255, 255);
@@ -17,22 +16,26 @@ body{
 }
 #p-gauche{
     width: 330px;
-    @media #{$phone} {
-        width: 100vh;
-    }
-    box-shadow: 0px 5px 1px black;
+    box-shadow: 0px 1px 1px black;
     #pg-header{
-        text-align: left;
+        text-align: center;
         height: 40px;
         p{
             display: inline-block;
             vertical-align: middle;
             font-size: large;
-            margin-left: 5px;
-            margin-top: 15px;
+            width: 30%;
+        }
+        .s-msg{
+            text-align: left;
+        }
+        .t-msg{
+            text-align: center;
+            color: #2180f3;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
         .icon-parametre{
-            margin-left: 190px;
+            text-align: right;
         }
     }
     #search{
@@ -40,7 +43,7 @@ body{
         margin-top: 0px;
         p input{
             margin-top: -7px;
-            width: 300px;
+            width: 95%;
             height: 35px;
             border-radius: 5px;
             background-color: #f7f7f7;
@@ -53,9 +56,23 @@ body{
         div{
             margin-top: 0px;
             display: inline-block;
-            width: 157px;
+            width: 49%;
             text-align: center;
             height: 30px;
+            &.person{
+                &:hover,&:active{
+                    border-bottom: 3px solid #2180f3;
+                    background-color: rgb(248, 248, 248);
+                    border-radius: 5px;
+                }
+            }
+            &.group{
+                &:hover{
+                    border-bottom: 3px solid #779ece;
+                    background-color: rgb(248, 248, 248);
+                    border-radius: 5px;
+                }
+            }
             p{
                 margin-top: 0px;
                 display: inline-block;
@@ -65,7 +82,7 @@ body{
             }
             .o-title{
                 color: #2180f3;
-                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
         }
     }
@@ -76,37 +93,30 @@ body{
         height: 500px;
         overflow: auto;
         scrollbar-width: 20px;
-        li{
-            margin-left: -40px;
-            height: 70px;
-            .msg-profil,div{
-                display: inline-block;
-                vertical-align: top;
-            }
-            .msg-profil img{
-                width: 40px;
-                height: 40px;
-                border-radius: 50px;
-                margin-left: 5px;
-            }
-            div{
-                margin-left: 5px;
-                border-bottom:1px solid #dadada;
-                .msg-content{
-                    position: relative;
-                    bottom: 10px;
-                    color: rgb(77, 74, 74);
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 15px;
+        text-align: left;
+        #one-content{
+            border: 1px solid red;
+            margin-top: 5px;
+            height: 50px;
+            padding: 5px;
+            .img{
+                float: left;
+                clear: both;
+                margin-right: 10px;
+                img{
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50px;
                 }
-                .msg-name{
-                    position: relative;
-                    top: 5px;
-                    font-size: 16px;
-                    color: rgb(62, 60, 60);
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-weight: bold;
-                }
+            }
+            .msg-name{
+                font-size: 18px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .msg-content{
+                font-family: Arial, Helvetica, sans-serif;
+                border: 1px solid red;
+                width: 50px;
             }
         }
         
@@ -118,27 +128,31 @@ body{
     header{
         width: 738;
         box-shadow: 1px 0px 4px black;
+        text-align: center;
         #h-gauche,#h-droite{
             display: inline-block;
-            width: 360px;
+            width: 49%;
         }
         div{
             p{
                 display: inline-block;
-                vertical-align: middle;
-                &.img-h{
+                vertical-align: top;
+                .img-h{
                     margin-left: 5px;
                     width: 30px;
                     height: 30px;
                     border-radius: 30px;
-                    background: #f6f7f8;
-                    background-image: -webkit-linear-gradient( left, #f6f7f8 0%, #eaecf3 20%, #f6f7f8 40%, #f6f7f8 100% );
+                }
+                &.h-title{
+                    font-size: 20px;
+                    margin-left: 10px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                 }
             }
         }
     }
     #messages{
-        height: 530px;
+        height: 82%;
         overflow: auto;
         background-color: #ffffff55;
         #envoyer-a{
@@ -152,7 +166,7 @@ body{
             width: fit-content;
             border-radius: 12px;
             word-wrap: break-word;
-            box-shadow: 0px 2px 2px #000000;
+            // box-shadow: 0px 2px 2px #000000;
             padding: 0px;
             margin-top: 5px;
             margin-bottom: 5px;
@@ -163,7 +177,7 @@ body{
         }
         #envoyer-par{
             clear: both;
-            background-color: hsl(0, 0%, 100%);
+            background-color: hsl(0, 0%, 93%);
             color: black;
             border-radius: 12px;
             margin-left: 5px;
@@ -174,58 +188,54 @@ body{
             max-width: 300px;
             font-size: 17px;
             font-family: Georgia, Verdana, Geneva, Tahoma, sans-serif;
-            box-shadow: 0px 2px 2px #000000;
+            // box-shadow: 0px 2px 2px #000000;
             p{
                 padding: 10px;
             }
         }
     }
     #e-saisie{
-        position: absolute;
-        bottom: -17px;
-        background-color: rgba(248, 244, 244, 0.5);
-        p{ 
-            display: inline-block;
-            textarea{
-                height: 40px;
-                width: 725px;
+        position: relative;
+        bottom: 0px;
+        height: 50px;
+        div{ 
+            .add img,.like img,.sticker img,.add-img img,.mic img{
+                margin-top: 10px;
+            }
+            .input{
+                height: 20px;
+                width: 50%;
                 margin: 0px;
                 font-size: 16px;
                 font-family: Arial, Helvetica, sans-serif;
-                padding-left: 7px;
+                padding: 7px;
+                padding-left: 10px;
                 padding-top: 7px;
                 border-radius: 10px;
-                background-color: rgba(248, 244, 244, 0.5);
             }
-            img{
-                position: relative;
-                right: 40px;
-                bottom: 5px;
-                height: 40px;
-                width: 0px;
-            }
+            
         }
     }
 }
 #p-droite{
     width: 250px;
-    box-shadow: 0px 5px 5px black;
+    box-shadow: 0px 1px 1px black;
     text-align: center;
     p{
-        
         img{
             height: 100px;
             width: 100px;
             border-radius: 100px;
             margin-top: 50px;
-            &{
-            }
-            
         }
         &.title{
             font-size: 20px;
             font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
+        }
+        &.promotion{
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
     }
     div#chat_{
@@ -245,3 +255,4 @@ body{
         
     }
 }
+@import './lib/responsive.scss';
