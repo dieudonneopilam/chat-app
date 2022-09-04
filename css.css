@@ -1,0 +1,100 @@
+
+form{
+    text-align: left;
+}
+.inlin-block{
+    display: inline-block;
+}
+.fieldset{
+    position: relative;
+    bottom: 18px;
+    left: 90px;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(108, 107, 107);
+}
+input{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    border:0.1px solid rgba(108, 107, 107, 0.493);
+    box-shadow: 0px 0px 1px rgba(108, 107, 107, 0.493);
+    padding: 5px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 2px gray;
+}
+.user{
+    width: 425px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.user-a{
+    margin-left: 90px; 
+}
+.user-span{
+    margin-left: 95px;
+    color: grey;
+}
+.zero{
+    margin-left: 0px;
+    text-align: left;
+    border: 1px solid red;
+}
+.zero-ontent{
+    margin-left: -75px;
+}
+.zero-content{
+    margin-left: -65px;
+}
+.mt-5{
+    margin-top: 5px;
+}
+.ckeckbox{
+    height: 20px;
+    width: 20px;
+}
+.user-t a{
+    color: dodgerblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.btn-primary{
+    background-color: dodgerblue;
+    border-color: white;
+    border: 1px solid dodgerblue;
+    height: 35px;
+    border-radius: 5px;
+    width: 80px;
+    font-size: 18px;
+    color: white;
+    margin-left: 230px;
+}
+.user-w{
+    width: 430px;
+}
+.user-h{
+    margin-left: 95px;
+}
+.img,form{
+    display: inline-block;
+    vertical-align: top;
+}
+.img{
+    text-align: center;
+    margin-left: 50px;
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+.content{
+    width:980px;
+    padding-left: 0px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+input:focus{
+    border: 0.1px solid dodgerblue;
+}

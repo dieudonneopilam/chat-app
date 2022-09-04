@@ -1,9 +1,10 @@
 (function(){
     var msg_envoyes = document.querySelectorAll('#content-users li');
-    var pGauche = document.querySelector('#one-content .msg-content')
+    var pGauche = document.querySelectorAll('#one-content .msg-content')
     var DivpGauche = document.querySelector('#one-content .cont')
     var input = document.querySelector('#input')
-    var textarea = document.querySelector('textarea')
+    
+    
 
 
     for (let index = 0; index < msg_envoyes.length; index++) {
@@ -29,8 +30,11 @@
         msg_envoye.addEventListener('mouseover',box)
         msg_envoye.addEventListener('mouseout',boxout)
     }
+    console.log(pGauche)
     var paragraphe = function(){
-        var nP = pGauche.innerText;
+        for (let index = 0; index < pGauche.length; index++) {
+            var nP = pGauche[index].innerText;
+        
         if(DivpGauche.clientWidth>=710){
             nP =''
             for (let i = 0; i < 80; i++) {
@@ -76,14 +80,11 @@
         }
         return nP
     }
+    }
     pGauche.innerHTML = paragraphe()
-    setInterval(() => {
-        console.log(textarea)
-    }, 5000);
+
     input.addEventListener('keyup',function(e){
-        if(e.key==="Enter"){
-            alert('enter touch')
-        }
+        
         var value = input.value
         var textarea = document.createElement('textarea')
         textarea.id="input"
@@ -97,4 +98,5 @@
         input.parentElement.replaceChild(textarea,input)
         textarea.focus()
     })
+
 })()
