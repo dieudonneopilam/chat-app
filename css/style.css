@@ -263,7 +263,7 @@ body {
   #p-milieu #e-saisie div #input {
     width: 65%;
     border: 0.2px solid rgb(245, 245, 245);
-    height: 20px;
+    height: 25px;
     margin: 0px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -273,6 +273,10 @@ body {
   }
   #p-milieu #e-saisie div span {
     margin: 1%;
+  }
+  #p-milieu #e-saisie div .like {
+    background-color: white;
+    border: 0;
   }
   #p-droite {
     width: 19%;
