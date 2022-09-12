@@ -19,20 +19,21 @@ $phone:"all  and (max-width:767px)";
             width:55%;
             div{ 
                 display: inline-block;
+                vertical-align: top;
                 width: 97%;
                 #input{
                     width: 65%;
                     border: 0.2px solid rgb(245, 245, 245);
-                    height: 25px;
                     margin: 0px;
                     font-size: 16px;
                     font-family: Arial, Helvetica, sans-serif;
-                    border-radius: 20px;
+                    border-radius: 5px;
                     padding: 5px;
-                    background-color: rgb(245, 245, 245);
+                    background-color: rgb(255, 255, 255);
+                    margin-bottom: -20px;
                 }
                 span{
-                    margin: 1%;
+                    margin-top: 1%;
                 }
                 .like{
                     background-color: white;
@@ -101,18 +102,25 @@ $phone:"all  and (max-width:767px)";
                 display: inline-block;
                 width: 97%;
                 #input{
-                    width: 51%;
+                    width: 57%;
                     border: 0.2px solid rgb(245, 245, 245);
                     height: 20px;
                     margin: 0px;
                     font-size: 16px;
                     font-family: Arial, Helvetica, sans-serif;
-                    border-radius: 20px;
+                    border-radius: 5px;
                     padding: 10px;
-                    background-color: rgb(245, 245, 245);
+                    background-color: rgb(255, 255, 255);
                 }
                 span{
                     margin: 1%;
+                }
+                .sticker{
+                    display: none;
+                }
+                .like{
+                    background-color: white;
+                    border: 0;
                 }
             }
         }

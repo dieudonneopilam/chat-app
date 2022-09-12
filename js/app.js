@@ -3,7 +3,7 @@
     var p = document.querySelectorAll('.msg-content')
     var input = document.querySelector('#input')
     var btnSearch = document.querySelector('#searchInput');
-
+    var msgEnvoyers = document.querySelectorAll('#one-content')
     var divsearch = document.querySelector('#resultSearch')
     // creatio de element paragraphe de resultat de recherche
     var pSearch = document.createElement('p');
@@ -15,7 +15,7 @@
             var name = document.querySelector('#p-droite .title')
             var photo = document.querySelector('#p-droite .photo img')
             name.innerText = this.querySelector('.msg-name').innerText
-            photo.src = this.querySelector('.msg-profil img').src
+            photo.src = this.querySelector('.cont img').src
         })
         var box = function(e){
             this.style.borderRadius = '20px';
@@ -88,23 +88,42 @@
 
     reduireMessageUser(p)
 
-    input.addEventListener('keyup',function(e){
-        var value = input.value
-        var textarea = document.createElement('textarea')
-        textarea.id="input"
-        textarea.value=value
-        input.parentElement.children[1].style.display='none'
-        input.parentElement.children[2].style.display='none'
-        console.log(input.parentElement.children[3])
-        textarea.style.width="80%"
-        textarea.style.padding="5px"
+    // input.addEventListener('keyup',function(e){
+    //     var value = input.value
+    //     var textarea = document.createElement('textarea')
+    //     textarea.id="input"
+    //     textarea.value=value
+    //     input.parentElement.children[1].style.display='none'
+    //     input.parentElement.children[2].style.display='none'
+    //     console.log(input.parentElement.children[3])
+    //     textarea.style.width="80%"
+    //     textarea.style.padding="5px"
         
-        input.parentElement.replaceChild(textarea,input)
-        textarea.focus()
-    })
+    //     input.parentElement.replaceChild(textarea,input)
+    //     textarea.focus()
+    // })
+
 
     btnSearch.addEventListener('keyup',function(){
         
     })
 
+    //
+    
+    
+    var b = window.document.querySelector("body")
+    b.scrollTop=b.scrollHeight
+
+    //validation du formulaire
+
+    var form = document.querySelector('#form')
+    var message = document.querySelector('#input')
+
+    form.addEventListener('submit',function(e){
+        if(message!=""){
+            
+        }else{
+            
+        }
+    })
 })()

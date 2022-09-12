@@ -18,7 +18,7 @@ body {
 
 #p-gauche {
   width: 330px;
-  box-shadow: 0px 1px 1px black;
+  box-shadow: 0px 1px 1px rgb(255, 255, 255);
 }
 #p-gauche #pg-header {
   text-align: center;
@@ -105,8 +105,8 @@ body {
   margin-right: 10px;
 }
 #p-gauche #content-users #one-content .img img {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50px;
 }
 #p-gauche #content-users #one-content .msg-name {
@@ -208,7 +208,6 @@ body {
 
 #p-droite {
   width: 250px;
-  box-shadow: 0px 1px 1px black;
   text-align: center;
 }
 #p-droite p img {
@@ -258,21 +257,22 @@ body {
   }
   #p-milieu #e-saisie div {
     display: inline-block;
+    vertical-align: top;
     width: 97%;
   }
   #p-milieu #e-saisie div #input {
     width: 65%;
     border: 0.2px solid rgb(245, 245, 245);
-    height: 25px;
     margin: 0px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 5px;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255, 255, 255);
+    margin-bottom: -20px;
   }
   #p-milieu #e-saisie div span {
-    margin: 1%;
+    margin-top: 1%;
   }
   #p-milieu #e-saisie div .like {
     background-color: white;
@@ -339,18 +339,25 @@ body {
     width: 97%;
   }
   #p-milieu #e-saisie div #input {
-    width: 51%;
+    width: 57%;
     border: 0.2px solid rgb(245, 245, 245);
     height: 20px;
     margin: 0px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 10px;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255, 255, 255);
   }
   #p-milieu #e-saisie div span {
     margin: 1%;
+  }
+  #p-milieu #e-saisie div .sticker {
+    display: none;
+  }
+  #p-milieu #e-saisie div .like {
+    background-color: white;
+    border: 0;
   }
   #p-droite {
     display: none;
